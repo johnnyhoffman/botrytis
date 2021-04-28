@@ -1,4 +1,4 @@
-ARM GAS  /var/folders/sy/x1dkwsgj58j1lmy_hry3vpdm0000gn/T//cc2tD3CN.s 			page 1
+ARM GAS  /var/folders/sy/x1dkwsgj58j1lmy_hry3vpdm0000gn/T//ccfKzTGQ.s 			page 1
 
 
    1              		.cpu cortex-m7
@@ -58,7 +58,7 @@ ARM GAS  /var/folders/sy/x1dkwsgj58j1lmy_hry3vpdm0000gn/T//cc2tD3CN.s 			page 1
   56 003a 0120     		movs	r0, #1
   57 003c 30BC     		pop	{r4, r5}
   58 003e 7047     		bx	lr
-ARM GAS  /var/folders/sy/x1dkwsgj58j1lmy_hry3vpdm0000gn/T//cc2tD3CN.s 			page 2
+ARM GAS  /var/folders/sy/x1dkwsgj58j1lmy_hry3vpdm0000gn/T//ccfKzTGQ.s 			page 2
 
 
   59              	.L7:
@@ -118,7 +118,7 @@ ARM GAS  /var/folders/sy/x1dkwsgj58j1lmy_hry3vpdm0000gn/T//cc2tD3CN.s 			page 1
  116              		.global	FATFS_UnLinkDriverEx
  117              		.syntax unified
  118              		.thumb
-ARM GAS  /var/folders/sy/x1dkwsgj58j1lmy_hry3vpdm0000gn/T//cc2tD3CN.s 			page 3
+ARM GAS  /var/folders/sy/x1dkwsgj58j1lmy_hry3vpdm0000gn/T//ccfKzTGQ.s 			page 3
 
 
  119              		.thumb_func
@@ -178,7 +178,7 @@ ARM GAS  /var/folders/sy/x1dkwsgj58j1lmy_hry3vpdm0000gn/T//cc2tD3CN.s 			page 1
  176 0012 61B1     		cbz	r1, .L27
  177 0014 1344     		add	r3, r3, r2
  178 0016 10B4     		push	{r4}
-ARM GAS  /var/folders/sy/x1dkwsgj58j1lmy_hry3vpdm0000gn/T//cc2tD3CN.s 			page 4
+ARM GAS  /var/folders/sy/x1dkwsgj58j1lmy_hry3vpdm0000gn/T//ccfKzTGQ.s 			page 4
 
 
  179 0018 517A     		ldrb	r1, [r2, #9]	@ zero_extendqisi2
@@ -226,27 +226,27 @@ ARM GAS  /var/folders/sy/x1dkwsgj58j1lmy_hry3vpdm0000gn/T//cc2tD3CN.s 			page 1
  225      00000000 
  225      00000000 
  226              		.ident	"GCC: (GNU Arm Embedded Toolchain 10-2020-q4-major) 10.2.1 20201103 (release)"
-ARM GAS  /var/folders/sy/x1dkwsgj58j1lmy_hry3vpdm0000gn/T//cc2tD3CN.s 			page 5
+ARM GAS  /var/folders/sy/x1dkwsgj58j1lmy_hry3vpdm0000gn/T//ccfKzTGQ.s 			page 5
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 ff_gen_drv.c
-/var/folders/sy/x1dkwsgj58j1lmy_hry3vpdm0000gn/T//cc2tD3CN.s:15     .text.FATFS_LinkDriverEx:0000000000000000 $t
-/var/folders/sy/x1dkwsgj58j1lmy_hry3vpdm0000gn/T//cc2tD3CN.s:24     .text.FATFS_LinkDriverEx:0000000000000000 FATFS_LinkDriverEx
-/var/folders/sy/x1dkwsgj58j1lmy_hry3vpdm0000gn/T//cc2tD3CN.s:62     .text.FATFS_LinkDriverEx:0000000000000040 $d
-/var/folders/sy/x1dkwsgj58j1lmy_hry3vpdm0000gn/T//cc2tD3CN.s:65     .text.FATFS_LinkDriver:0000000000000000 $t
-/var/folders/sy/x1dkwsgj58j1lmy_hry3vpdm0000gn/T//cc2tD3CN.s:73     .text.FATFS_LinkDriver:0000000000000000 FATFS_LinkDriver
-/var/folders/sy/x1dkwsgj58j1lmy_hry3vpdm0000gn/T//cc2tD3CN.s:111    .text.FATFS_LinkDriver:0000000000000044 $d
-/var/folders/sy/x1dkwsgj58j1lmy_hry3vpdm0000gn/T//cc2tD3CN.s:114    .text.FATFS_UnLinkDriverEx:0000000000000000 $t
-/var/folders/sy/x1dkwsgj58j1lmy_hry3vpdm0000gn/T//cc2tD3CN.s:122    .text.FATFS_UnLinkDriverEx:0000000000000000 FATFS_UnLinkDriverEx
-/var/folders/sy/x1dkwsgj58j1lmy_hry3vpdm0000gn/T//cc2tD3CN.s:153    .text.FATFS_UnLinkDriverEx:0000000000000034 $d
-/var/folders/sy/x1dkwsgj58j1lmy_hry3vpdm0000gn/T//cc2tD3CN.s:156    .text.FATFS_UnLinkDriver:0000000000000000 $t
-/var/folders/sy/x1dkwsgj58j1lmy_hry3vpdm0000gn/T//cc2tD3CN.s:164    .text.FATFS_UnLinkDriver:0000000000000000 FATFS_UnLinkDriver
-/var/folders/sy/x1dkwsgj58j1lmy_hry3vpdm0000gn/T//cc2tD3CN.s:195    .text.FATFS_UnLinkDriver:0000000000000034 $d
-/var/folders/sy/x1dkwsgj58j1lmy_hry3vpdm0000gn/T//cc2tD3CN.s:198    .text.FATFS_GetAttachedDriversNbr:0000000000000000 $t
-/var/folders/sy/x1dkwsgj58j1lmy_hry3vpdm0000gn/T//cc2tD3CN.s:206    .text.FATFS_GetAttachedDriversNbr:0000000000000000 FATFS_GetAttachedDriversNbr
-/var/folders/sy/x1dkwsgj58j1lmy_hry3vpdm0000gn/T//cc2tD3CN.s:216    .text.FATFS_GetAttachedDriversNbr:0000000000000008 $d
-/var/folders/sy/x1dkwsgj58j1lmy_hry3vpdm0000gn/T//cc2tD3CN.s:224    .bss.disk:0000000000000000 disk
-/var/folders/sy/x1dkwsgj58j1lmy_hry3vpdm0000gn/T//cc2tD3CN.s:220    .bss.disk:0000000000000000 $d
+/var/folders/sy/x1dkwsgj58j1lmy_hry3vpdm0000gn/T//ccfKzTGQ.s:15     .text.FATFS_LinkDriverEx:0000000000000000 $t
+/var/folders/sy/x1dkwsgj58j1lmy_hry3vpdm0000gn/T//ccfKzTGQ.s:24     .text.FATFS_LinkDriverEx:0000000000000000 FATFS_LinkDriverEx
+/var/folders/sy/x1dkwsgj58j1lmy_hry3vpdm0000gn/T//ccfKzTGQ.s:62     .text.FATFS_LinkDriverEx:0000000000000040 $d
+/var/folders/sy/x1dkwsgj58j1lmy_hry3vpdm0000gn/T//ccfKzTGQ.s:65     .text.FATFS_LinkDriver:0000000000000000 $t
+/var/folders/sy/x1dkwsgj58j1lmy_hry3vpdm0000gn/T//ccfKzTGQ.s:73     .text.FATFS_LinkDriver:0000000000000000 FATFS_LinkDriver
+/var/folders/sy/x1dkwsgj58j1lmy_hry3vpdm0000gn/T//ccfKzTGQ.s:111    .text.FATFS_LinkDriver:0000000000000044 $d
+/var/folders/sy/x1dkwsgj58j1lmy_hry3vpdm0000gn/T//ccfKzTGQ.s:114    .text.FATFS_UnLinkDriverEx:0000000000000000 $t
+/var/folders/sy/x1dkwsgj58j1lmy_hry3vpdm0000gn/T//ccfKzTGQ.s:122    .text.FATFS_UnLinkDriverEx:0000000000000000 FATFS_UnLinkDriverEx
+/var/folders/sy/x1dkwsgj58j1lmy_hry3vpdm0000gn/T//ccfKzTGQ.s:153    .text.FATFS_UnLinkDriverEx:0000000000000034 $d
+/var/folders/sy/x1dkwsgj58j1lmy_hry3vpdm0000gn/T//ccfKzTGQ.s:156    .text.FATFS_UnLinkDriver:0000000000000000 $t
+/var/folders/sy/x1dkwsgj58j1lmy_hry3vpdm0000gn/T//ccfKzTGQ.s:164    .text.FATFS_UnLinkDriver:0000000000000000 FATFS_UnLinkDriver
+/var/folders/sy/x1dkwsgj58j1lmy_hry3vpdm0000gn/T//ccfKzTGQ.s:195    .text.FATFS_UnLinkDriver:0000000000000034 $d
+/var/folders/sy/x1dkwsgj58j1lmy_hry3vpdm0000gn/T//ccfKzTGQ.s:198    .text.FATFS_GetAttachedDriversNbr:0000000000000000 $t
+/var/folders/sy/x1dkwsgj58j1lmy_hry3vpdm0000gn/T//ccfKzTGQ.s:206    .text.FATFS_GetAttachedDriversNbr:0000000000000000 FATFS_GetAttachedDriversNbr
+/var/folders/sy/x1dkwsgj58j1lmy_hry3vpdm0000gn/T//ccfKzTGQ.s:216    .text.FATFS_GetAttachedDriversNbr:0000000000000008 $d
+/var/folders/sy/x1dkwsgj58j1lmy_hry3vpdm0000gn/T//ccfKzTGQ.s:224    .bss.disk:0000000000000000 disk
+/var/folders/sy/x1dkwsgj58j1lmy_hry3vpdm0000gn/T//ccfKzTGQ.s:220    .bss.disk:0000000000000000 $d
 
 NO UNDEFINED SYMBOLS

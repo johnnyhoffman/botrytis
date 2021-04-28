@@ -67,6 +67,12 @@ NumericParam* createBPMModSub() {
 NumericParam* createBPMModAdd() {
     return new FloatParam("mod add", 1, 0, 60, 0.01, 1, 1);
 }
+NumericParam* createNoteNumberModSub() {
+    return new FloatParam("mod sub", 1, 0, 60, 0.01, 1, 1);
+}
+NumericParam* createNoteNumberModAdd() {
+    return new FloatParam("mod add", 1, 0, 60, 0.01, 1, 1);
+}
 NumericParam* createDivisionModSub() {
     return new FloatParam("mod sub", 4, 0, 8, 0.01, 1, 1);
 }

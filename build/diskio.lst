@@ -1,4 +1,4 @@
-ARM GAS  /var/folders/sy/x1dkwsgj58j1lmy_hry3vpdm0000gn/T//ccdc1RAT.s 			page 1
+ARM GAS  /var/folders/sy/x1dkwsgj58j1lmy_hry3vpdm0000gn/T//ccwxfV17.s 			page 1
 
 
    1              		.cpu cortex-m7
@@ -58,7 +58,7 @@ ARM GAS  /var/folders/sy/x1dkwsgj58j1lmy_hry3vpdm0000gn/T//ccdc1RAT.s 			page 1
   58 000c 4FF0010C 		mov	ip, #1
   59 0010 5268     		ldr	r2, [r2, #4]
   60 0012 03F800C0 		strb	ip, [r3, r0]
-ARM GAS  /var/folders/sy/x1dkwsgj58j1lmy_hry3vpdm0000gn/T//ccdc1RAT.s 			page 2
+ARM GAS  /var/folders/sy/x1dkwsgj58j1lmy_hry3vpdm0000gn/T//ccwxfV17.s 			page 2
 
 
   61 0016 087A     		ldrb	r0, [r1, #8]	@ zero_extendqisi2
@@ -118,7 +118,7 @@ ARM GAS  /var/folders/sy/x1dkwsgj58j1lmy_hry3vpdm0000gn/T//ccdc1RAT.s 			page 1
  119 000e EC68     		ldr	r4, [r5, #12]
  120 0010 A446     		mov	ip, r4
  121 0012 30BC     		pop	{r4, r5}
-ARM GAS  /var/folders/sy/x1dkwsgj58j1lmy_hry3vpdm0000gn/T//ccdc1RAT.s 			page 3
+ARM GAS  /var/folders/sy/x1dkwsgj58j1lmy_hry3vpdm0000gn/T//ccwxfV17.s 			page 3
 
 
  122 0014 6047     		bx	ip
@@ -164,28 +164,28 @@ ARM GAS  /var/folders/sy/x1dkwsgj58j1lmy_hry3vpdm0000gn/T//ccdc1RAT.s 			page 1
  166 0000 0020     		movs	r0, #0
  167 0002 7047     		bx	lr
  169              		.ident	"GCC: (GNU Arm Embedded Toolchain 10-2020-q4-major) 10.2.1 20201103 (release)"
-ARM GAS  /var/folders/sy/x1dkwsgj58j1lmy_hry3vpdm0000gn/T//ccdc1RAT.s 			page 4
+ARM GAS  /var/folders/sy/x1dkwsgj58j1lmy_hry3vpdm0000gn/T//ccwxfV17.s 			page 4
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 diskio.c
-/var/folders/sy/x1dkwsgj58j1lmy_hry3vpdm0000gn/T//ccdc1RAT.s:15     .text.disk_status:0000000000000000 $t
-/var/folders/sy/x1dkwsgj58j1lmy_hry3vpdm0000gn/T//ccdc1RAT.s:24     .text.disk_status:0000000000000000 disk_status
-/var/folders/sy/x1dkwsgj58j1lmy_hry3vpdm0000gn/T//ccdc1RAT.s:38     .text.disk_status:0000000000000010 $d
-/var/folders/sy/x1dkwsgj58j1lmy_hry3vpdm0000gn/T//ccdc1RAT.s:41     .text.disk_initialize:0000000000000000 $t
-/var/folders/sy/x1dkwsgj58j1lmy_hry3vpdm0000gn/T//ccdc1RAT.s:49     .text.disk_initialize:0000000000000000 disk_initialize
-/var/folders/sy/x1dkwsgj58j1lmy_hry3vpdm0000gn/T//ccdc1RAT.s:70     .text.disk_initialize:0000000000000020 $d
-/var/folders/sy/x1dkwsgj58j1lmy_hry3vpdm0000gn/T//ccdc1RAT.s:73     .text.disk_read:0000000000000000 $t
-/var/folders/sy/x1dkwsgj58j1lmy_hry3vpdm0000gn/T//ccdc1RAT.s:81     .text.disk_read:0000000000000000 disk_read
-/var/folders/sy/x1dkwsgj58j1lmy_hry3vpdm0000gn/T//ccdc1RAT.s:98     .text.disk_read:0000000000000018 $d
-/var/folders/sy/x1dkwsgj58j1lmy_hry3vpdm0000gn/T//ccdc1RAT.s:101    .text.disk_write:0000000000000000 $t
-/var/folders/sy/x1dkwsgj58j1lmy_hry3vpdm0000gn/T//ccdc1RAT.s:109    .text.disk_write:0000000000000000 disk_write
-/var/folders/sy/x1dkwsgj58j1lmy_hry3vpdm0000gn/T//ccdc1RAT.s:126    .text.disk_write:0000000000000018 $d
-/var/folders/sy/x1dkwsgj58j1lmy_hry3vpdm0000gn/T//ccdc1RAT.s:129    .text.disk_ioctl:0000000000000000 $t
-/var/folders/sy/x1dkwsgj58j1lmy_hry3vpdm0000gn/T//ccdc1RAT.s:137    .text.disk_ioctl:0000000000000000 disk_ioctl
-/var/folders/sy/x1dkwsgj58j1lmy_hry3vpdm0000gn/T//ccdc1RAT.s:151    .text.disk_ioctl:0000000000000014 $d
-/var/folders/sy/x1dkwsgj58j1lmy_hry3vpdm0000gn/T//ccdc1RAT.s:154    .text.get_fattime:0000000000000000 $t
-/var/folders/sy/x1dkwsgj58j1lmy_hry3vpdm0000gn/T//ccdc1RAT.s:162    .text.get_fattime:0000000000000000 get_fattime
+/var/folders/sy/x1dkwsgj58j1lmy_hry3vpdm0000gn/T//ccwxfV17.s:15     .text.disk_status:0000000000000000 $t
+/var/folders/sy/x1dkwsgj58j1lmy_hry3vpdm0000gn/T//ccwxfV17.s:24     .text.disk_status:0000000000000000 disk_status
+/var/folders/sy/x1dkwsgj58j1lmy_hry3vpdm0000gn/T//ccwxfV17.s:38     .text.disk_status:0000000000000010 $d
+/var/folders/sy/x1dkwsgj58j1lmy_hry3vpdm0000gn/T//ccwxfV17.s:41     .text.disk_initialize:0000000000000000 $t
+/var/folders/sy/x1dkwsgj58j1lmy_hry3vpdm0000gn/T//ccwxfV17.s:49     .text.disk_initialize:0000000000000000 disk_initialize
+/var/folders/sy/x1dkwsgj58j1lmy_hry3vpdm0000gn/T//ccwxfV17.s:70     .text.disk_initialize:0000000000000020 $d
+/var/folders/sy/x1dkwsgj58j1lmy_hry3vpdm0000gn/T//ccwxfV17.s:73     .text.disk_read:0000000000000000 $t
+/var/folders/sy/x1dkwsgj58j1lmy_hry3vpdm0000gn/T//ccwxfV17.s:81     .text.disk_read:0000000000000000 disk_read
+/var/folders/sy/x1dkwsgj58j1lmy_hry3vpdm0000gn/T//ccwxfV17.s:98     .text.disk_read:0000000000000018 $d
+/var/folders/sy/x1dkwsgj58j1lmy_hry3vpdm0000gn/T//ccwxfV17.s:101    .text.disk_write:0000000000000000 $t
+/var/folders/sy/x1dkwsgj58j1lmy_hry3vpdm0000gn/T//ccwxfV17.s:109    .text.disk_write:0000000000000000 disk_write
+/var/folders/sy/x1dkwsgj58j1lmy_hry3vpdm0000gn/T//ccwxfV17.s:126    .text.disk_write:0000000000000018 $d
+/var/folders/sy/x1dkwsgj58j1lmy_hry3vpdm0000gn/T//ccwxfV17.s:129    .text.disk_ioctl:0000000000000000 $t
+/var/folders/sy/x1dkwsgj58j1lmy_hry3vpdm0000gn/T//ccwxfV17.s:137    .text.disk_ioctl:0000000000000000 disk_ioctl
+/var/folders/sy/x1dkwsgj58j1lmy_hry3vpdm0000gn/T//ccwxfV17.s:151    .text.disk_ioctl:0000000000000014 $d
+/var/folders/sy/x1dkwsgj58j1lmy_hry3vpdm0000gn/T//ccwxfV17.s:154    .text.get_fattime:0000000000000000 $t
+/var/folders/sy/x1dkwsgj58j1lmy_hry3vpdm0000gn/T//ccwxfV17.s:162    .text.get_fattime:0000000000000000 get_fattime
 
 UNDEFINED SYMBOLS
 disk

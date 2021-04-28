@@ -183,9 +183,10 @@ void MonoEngine::AudioCallbackInit(size_t size)
             }
         }
         velocity->Set(velocityState);
-        
+    }
+    if (activeNotes.size() || !useMidiNotes->value) {
         lastSemitone = semitone;
-        semitone = util::getSemitoneFromMidiNote(activeNote.noteNumber);
+        semitone = util::getSemitoneFromMidiNote(useMidiNotes->value ? activeNotes.front().noteNumber : noteNumberParam->GetModulatedValue());
         if (lastSemitone != semitone || activeNotes.size() != lastActiveNotesCount)
         {
             for (int i = 0; i < 3; i++)
@@ -375,6 +376,9 @@ void MonoEngine::Init(float sampleRate)
 }
 
 void MonoEngine::PreWire() {
+    useMidiNotes->value = true;
+
+
     for (int i = 0; i < 5; i++) {
         gate->AssignDestination(envelopes[i]->gate);
     }
@@ -459,10 +463,14 @@ MonoEngine::MonoEngine()
     #ifdef ENABLE_PRESET_DEVELOPMENT
     presets = new Presets("mono_engine");
     #endif
+
     for (int i = 0; i < MENU_WIDTH * 2; i++)
     {
         modulationSources.engineModulationSources[i] = 0;
     }
+
+    noteNumberParam = new ComplexNumericParam(new FloatParam("note number", 60, 0, 127, 0.001, 1, 1), createNoteNumberModSub, createNoteNumberModAdd, "note number", noteNumberIcon);
+    useMidiNotes = new BoolParam();
 
     clock.asModSource = new ModulationSource("clock out", timeIcon);
     clock.bpmParam = new ComplexNumericParam(new FloatParam("bpm", 110, 0, 666, 0.01, 1, 1), createBPMModSub, createBPMModAdd, "clock bpm", bpmIcon);
@@ -575,6 +583,12 @@ void MonoEngine::SetMenu(MenuState* menuState)
     int y = 0;
     int x = 0;
     menuState->menuItems[y][x]->Set("clock", timeIcon, clock.screenNode);
+    x += 2;
+    menuState->menuItems[y][x]->Set(useMidiNotes->value ? "use midi notes" : "use note number param", useMidiNotes->value ? midiOnIcon : midiIcon, useMidiNotes->screenNode);
+    if (!useMidiNotes->value) {
+        x += 1;
+        menuState->menuItems[y][x]->Set("note number", noteNumberIcon, noteNumberParam->screenNode);
+    }
     y++;
     x = 0;
     menuState->menuItems[y][x]->Set("oscillator 1", o1Icon, oscillators[0].screenNode);

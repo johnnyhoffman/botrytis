@@ -399,6 +399,18 @@ bool divisionIconArray[8][8] = {
 };
 Icon *divisionIcon = new Icon(divisionIconArray);
 
+bool noteNumberIconArray[8][8] = {
+    {1, 1, 1, 1, 0, 0, 0, 0},
+    {0, 0, 0, 1, 0, 1, 1, 0},
+    {0, 0, 0, 1, 0, 1, 0, 1},
+    {0, 0, 1, 0, 0, 1, 0, 0},
+    {0, 0, 1, 0, 1, 1, 1, 0},
+    {0, 1, 0, 0, 0, 1, 0, 0},
+    {0, 1, 0, 0, 0, 1, 0, 0},
+    {1, 0, 0, 0, 1, 0, 0, 0},
+};
+Icon *noteNumberIcon = new Icon(noteNumberIconArray);
+
 bool squareStartHighIconArray[8][8] = {
     {1, 1, 1, 1, 0, 0, 0, 0},
     {0, 0, 0, 1, 0, 0, 0, 0},
@@ -697,7 +709,20 @@ bool fIconArray[8][8] = {
     {0, 0, 0, 0, 0, 0, 0, 0},
 };
 Icon *fIcon = new Icon(fIconArray);
-Icon *fOnIcon = new Icon(fOnIcon, true);
+Icon *fOnIcon = new Icon(fIcon, true);
+
+bool midiIconArray[8][8] = {
+    {1, 1, 1, 1, 1, 0, 1, 0},
+    {1, 0, 1, 0, 1, 0, 1, 0},
+    {1, 0, 1, 0, 1, 0, 1, 0},
+    {0, 0, 0, 0, 0, 0, 0, 0},
+    {1, 1, 0, 0, 0, 0, 0, 0},
+    {1, 0, 1, 0, 0, 0, 1, 0},
+    {1, 0, 1, 0, 0, 0, 1, 0},
+    {1, 1, 0, 0, 0, 0, 1, 0},
+};
+Icon *midiIcon = new Icon(midiIconArray);
+Icon *midiOnIcon = new Icon(midiIcon, true);
 
 bool feedbackIconArray[8][8] = {
     {0, 0, 1, 1, 1, 1, 1, 0},

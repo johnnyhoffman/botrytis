@@ -19,14 +19,14 @@ midi mono synth for daisy patch
 * * * [Three effects](#three-effects)
 * * * [Two mixers](#two-mixers)
 * * [Outputs](#outputs)
-* * [Mod source list](#mod-source-list)
+* * [All mod sources](#mod-source-list)
 * [Getting a hang of it](#getting-a-hang-of-it)
 * [Presets](#presets)
 
 ## Intro
 Botrytis is firmware for the Daisy Patch. If you are unfamiliar with the daisy patch, you can checkout out the [product page](https://www.electro-smith.com/daisy/patch) and follow links from there. I have no affiliation with Electrosmith except as a satisfied customer.
 
-Botrytis is a mono synth, meant to be interfaced with a midi instrument. I personally primarily use it with a midi keyboard, but you should be able to make good use of it with a sequencer, pads, or whatever.
+Botrytis is a mono synth, primarily meant to be interfaced with a midi instrument. I personally use it with a midi keyboard, but you should be able to make good use of it with a sequencer, pads, or whatever. You can also do a decent amount without a midi controller, see [Note number sources](#node-number-sources) below.
 
 ## Philosophy
 It's been fun to play around with the Daisy Patch, load a bunch of firmwares on it, and try different expirements. After all that though, I wanted a firmware that I could keep loaded on the hardware, and use as a solid musical tool without having to hook it up to the computer to load new firmware every time I wanted something different. I've designed botrytis to have many of the core functions I reach for, and to have enough opportunities for customization and experimentation to keep it from getting stale. I like to use my little eurorack system with a keyboard, so botrytis is centered around being a mono synth, but it has some functionality outside of that realm as well.
@@ -34,7 +34,7 @@ It's been fun to play around with the Daisy Patch, load a bunch of firmwares on 
 The Daisy Patch only has 5 knobs, so the "knob-per-function" design philosphy isn't really an option for a synth of any complexity. Also, because I want to keep the firmware from feeling stale as it stays loaded on the hardware, I didn't want to have to dedicate each knob or input or output to a single purpose. My solution to this is to make (almost) every input and output assignable. More about this in the explaination of Modulation Sources & Destinations below. Because this isn't knob-per-function, the general workflow I suggest is to use the menu to change parameters while experimenting, then assigning parameters to knobs or other controls if you want to use them when actually playing/performing.
 
 ## Prerequisites
-You will of course need a Daisy Patch all powered up, and connected to a computer via USB to load the firmware. If you want to connect a midi device (which you probably do, although botrytis can still do a few things without it), you'll need some way to send out the midi signal through a TRS cable. I'm using a 5-pin cable out from my keyboard, into a midi-to-trs adapter, into the Patch.
+You will of course need a Daisy Patch all powered up, and connected to a computer via USB to load the firmware. If you want to connect a midi device, you'll need some way to send out the midi signal through a TRS cable. I'm using a 5-pin cable out from my keyboard, into a midi-to-trs adapter, into the Patch.
 
 ## Installation
 Follow the [daisy wiki](https://github.com/electro-smith/DaisyWiki/wiki) if you don't already know to flash firmware to the patch. Then you can just download the [botritus binary](build/main.bin) and flash it.
@@ -55,6 +55,9 @@ Botrytis is composed of a handful of various functions, modules, utilities, or w
 
 ### Clock
 The clock determines how long a period of time is in the context of the synth engine. All time-based parameters in botrytis are relative to the clock, e.g. an envelope's attack time of 3% means it lasts 3% of the clock's period. The clock's period is defined in BPM (beats per minute), so the higher the BPM the shorter the period. The other parameters of the clock only matter if you are using it as a modulation source. As a modulation source, the clock acts as a low-frequency square wave (or in other words a repeating gate). The "division" parameter dictates how often to open the gate. By default it is set to 4, meaning the gate opens 4 times per period. The invert toggle swaps the open and closed states of the gate. The "reset gate" modulation destination can be set to some other gate (e.g. for me I send a gate out from the play button in my DAW) that restarts the phase of the clock, so you can get all your clocks in sync.
+
+### Note number sources
+Also in the top row is a toggle between "use midi notes" and "use note number params". Using midi notes means the base note for all oscillators is based on whatever note the midi device is sending, but you can still detune individual oscillators away from that root note. Toggling to "use note number params" lets you define the root note with the "note number" parameter that will appear to the right.
 
 ### Signal generators
 The items in the second row of the main menu are  primarily signal generators, which is to say they create a signal rather than process it.
@@ -80,11 +83,25 @@ Each of the two mixers have 4 inputs. Each input is a modulation destination for
 ### Outputs
 The items in the fourth row of the main menu are modulation destinations for the different physical outputs on the Daisy patch. For example, send what you want to hear to the audio outs, the clock signal to the gate out, an LFO to one CV out and an envelope to the other.
 
-### Mod source list
-On the last row is the "modulation sources" menu which lets you view which modulation destinations a modulation source has set.
+### All mod sources
+On the last row is the "modulation sources" menu which lets you view which modulation destinations a modulation source has set. Mod sources only show up in this list if they have destinations assigned to them. You will see the full list of mod sources when accessing a list via a mod destination. Below are descriptions of each mod source:
+
+* **Controls 1-4**: These refer to the four CTRL knob-jack combos on the Daisy Patch. When nothing is plugged into the jack, this mod source sends the knobs position, and when something is plugged in the mod source sends the value of the signal coming through the jack. You can use the knobs as macros, or the jacks as external CV controls, or do whatever you want to do with them.
+* **Audio Ins 1-4**: These refer to the four audio-in jacks on the Daisy Patch. You can use this to send external sounds signals through the effects, or use them to FM one of the internal oscillators, or do whatever you want to do with them.
+* **Gates 1-2**: These refer to the two gate-in jacks on the Daisy Patch. You can use them to send sequencer gates in, or do whatever you want to do with them.
+* **Clock out**: This is the square wave produced by the clock. I like to send it out of the gate to clock a sequencer.
+* **Oscillators 1-3**: These are the outputs of each oscillator. You can FM another oscillator with it, send it to an effect or mixer, or do whatever you want to do with it.
+* **Filter out, phaser out, and delay out**: These are the processed signals coming out of these effects. Send them to a mixer, to an audio out, or whatever.
+* **Midi gate**: This is a gate that's on when a midi key is pressed and off otherwise. Send it to the gate of an envelope, the reset gate of an LFO, or whatever.
+* **Velocity**: This is the midi velocity of the active midi key. Send it to an envelope's mod multiplier, or do whatever you want with it.
+* **Channel pressure**: If your midi device supports channel pressure, this is that.
+* **Envelopes 1-5**: These are the envelope outputs as dictated by the gate and the ADSR values. Send them to an oscillator level, filter frequency, or do whatever.
+* **LFOS 1-5**: These are the LFO outputs.
+* **Mixers 1-2**: These send out the mixed sources.
+* **None**: This clears mod source for the selected mod destination.
 
 ## Getting a hang of it
 I'm aware that it might be a bit odd to get used to at first, but once you get used to routing things around as modulation sources and destinations, you've pretty much learned all you need to. I suggest looking through the mod source list for the initiliazed state, and seeing how signals are routed around and how that results in the sounds it produces, and then going on from there to tweak parameters and modulation sources.
 
 ## Presets
-Nope. I had some trouble reading and writing to the SD card. If any body wants to help me out with that let me know, and then I can move forward with implementing presets. In the meantime, embrace impermanence.
+Nope. I had some trouble reading from and writing to the SD card. If someone wants to help me out with that let me know, and then I can move forward with implementing presets. In the meantime, embrace impermanence.

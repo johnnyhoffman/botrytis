@@ -152,6 +152,8 @@ public:
     ModulationSource* gate = nullptr;
     ModulationSource* velocity = nullptr;
     float velocityState = 0;
+    BoolParam* useMidiNotes = nullptr;
+    ComplexNumericParam* noteNumberParam = nullptr;
     ModulationSource* channelPressure = nullptr;
     ScreenNode *screenNode = nullptr;
 
