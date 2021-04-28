@@ -19,7 +19,7 @@ midi mono synth for daisy patch
 * * * [Three effects](#three-effects)
 * * * [Two mixers](#two-mixers)
 * * [Outputs](#outputs)
-* * [All mod sources](#mod-source-list)
+* * [All mod sources](#all-mod-sources)
 * [Getting a hang of it](#getting-a-hang-of-it)
 * [Presets](#presets)
 
