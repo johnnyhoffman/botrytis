@@ -550,6 +550,8 @@ MonoEngine::MonoEngine()
 
     gate = new ModulationSource("midi gate", gateIcon);
     velocity = new ModulationSource("velocity", velocityIcon);
+    // default to 1 so the pre-wired envelope level multipliers have no effect when not using midi
+    velocity->Set(1);
     channelPressure = new ModulationSource("channel pressure", pressureIcon);
 
     modulationSources.engineModulationSources[6] = filter.asModSource;

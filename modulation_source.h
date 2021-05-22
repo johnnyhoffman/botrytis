@@ -19,7 +19,7 @@ public:
     ScreenNode *screenNode = nullptr;
 
 private:
-    float value;
+    float value = 0;
 };
 
 #endif
